@@ -1,0 +1,5 @@
+stage,format,handling,notes
+input,JPG,selected locally in the browser,Supported image input
+input,PNG,selected locally in the browser,Supported image input
+input,WebP,selected locally in the browser,Supported image input
+output,PNG,downloaded after local repair,Fixed export format
