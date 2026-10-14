@@ -1,5 +1,11 @@
-stage,format,handling,notes
-input,JPG,selected locally in the browser,Supported image input
-input,PNG,selected locally in the browser,Supported image input
-input,WebP,selected locally in the browser,Supported image input
-output,PNG,downloaded after local repair,Fixed export format
+﻿stage,item,value,notes
+input,JPG (image/jpeg),accepted,selected locally in the browser
+input,PNG (image/png),accepted,selected locally in the browser
+input,WebP (image/webp),accepted,selected locally in the browser
+input,other formats,not accepted,only the three types above appear in the file picker
+output,PNG (image/png),fixed,download name local-watermark-cleanup.png
+limit,file size,8 MiB,larger files are rejected before processing
+limit,longest side,4096 px,resize the image first and try again
+limit,images per run,1,one file at a time; there is no batch mode
+limit,brush size,8-100 px,default 32 px
+privacy,network request during repair,none,repair runs in the browser tab
