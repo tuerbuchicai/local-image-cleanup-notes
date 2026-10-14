@@ -9,9 +9,15 @@ Use this checklist for a small visible text label, logo, or piece of clutter on 
 5. If a face, edge, lettering, or repeated pattern changes, clear the mark and retry with a tighter selection.
 6. Export the reviewed result as PNG.
 
+## How the repair is produced
+
+The marked pixels are replaced with a weighted average of nearby unmarked pixels, sampled outward from each masked pixel until enough unmasked neighbours are found. That makes the result repeatable: the same mask on the same image gives the same output. It also means the tool has nothing to invent — it continues whatever is already next to the mark.
+
 ## Fit and limits
 
 This workflow is most suitable for a small mark on a comparatively even background. It is not automatic detection, and it does not guarantee a seamless reconstruction on detailed textures, faces, or large areas.
+
+Measured limits of the documented workflow: one image per run, up to 8 MiB, longest side up to 4096 px, brush from 8 to 100 px. Export is always PNG. See `image-format-export-matrix.csv`.
 
 ## Privacy boundary
 
